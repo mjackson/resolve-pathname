@@ -44,7 +44,7 @@ import resolvePathname from 'resolve-pathname'
 // argument is the path we're coming from, or the current
 // pathname. It defaults to "/".
 resolvePathname('about', '/company/jobs') // /company/about
-resolvePathname('../help', '/company/jobs') // /help
+resolvePathname('../jobs', '/company/team/ceo') // /company/jobs
 resolvePathname('about') // /about
 resolvePathname('/about') // /about
 
@@ -54,9 +54,9 @@ resolvePathname('about', '/company/info/') // /company/info/about
 
 // In browsers, it's easy to resolve a URL pathname relative to
 // the current page. Just use window.location! e.g. if
-// window.location.pathname == '/company/jobs' then
-resolvePathname('about', window.location.pathname) // /company/about
-resolvePathname('../help', window.location.pathname) // /help
+// window.location.pathname == '/company/team/ceo' then
+resolvePathname('cto', window.location.pathname) // /company/team/cto
+resolvePathname('../jobs', window.location.pathname) // /company/jobs
 ```
 
 ## Prior Work
