@@ -1,9 +1,6 @@
 {
   "extends": "airbnb",
   "parser": "babel-eslint",
-  "env": {
-    "mocha": true
-  },
   "rules": {
     "curly": [2, "multi-or-nest", "consistent"],
     "semi": [2, "never"]
