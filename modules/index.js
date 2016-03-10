@@ -16,7 +16,7 @@ const resolvePathname = (to, from = '/') => {
       'Pathname "%s" is not a valid URL pathname',
       to
     )
-    
+
     return to
   }
 
