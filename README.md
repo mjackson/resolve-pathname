@@ -20,10 +20,10 @@ Using [npm](https://www.npmjs.com/):
 Then, use as you would anything else:
 
 ```js
-// using an ES6 transpiler, like babel
+// using ES6 modules
 import resolvePathname from 'resolve-pathname'
 
-// not using an ES6 transpiler
+// using CommonJS modules
 var resolvePathname = require('resolve-pathname')
 ```
 
