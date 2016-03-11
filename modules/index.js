@@ -44,4 +44,4 @@ const resolvePathname = (to, from = '/') => {
   return prefix + parts.join('/')
 }
 
-export default resolvePathname
+module.exports = resolvePathname

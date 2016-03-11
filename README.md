@@ -24,7 +24,7 @@ Then, use as you would anything else:
 import resolvePathname from 'resolve-pathname'
 
 // not using an ES6 transpiler
-var resolvePathname = require('resolve-pathname').resolvePathname
+var resolvePathname = require('resolve-pathname')
 ```
 
 The UMD build is also available on [npmcdn](https://npmcdn.com):
