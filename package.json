@@ -1,6 +1,6 @@
 {
   "name": "resolve-pathname",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Resolve URL pathnames using JavaScript",
   "author": "Michael Jackson",
   "license": "MIT",
