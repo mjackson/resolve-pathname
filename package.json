@@ -5,7 +5,7 @@
   "author": "Michael Jackson",
   "license": "MIT",
   "main": "lib",
-  "browser": "umd/resolvePathname.min.js",
+  "browser": "umd/resolve-pathname.min.js",
   "files": [
     "lib",
     "umd"
@@ -14,8 +14,8 @@
     "lint": "eslint modules",
     "build": "node ./scripts/build.js",
     "build-cjs": "rimraf lib && babel ./modules -d lib --ignore '__tests__'",
-    "build-min": "NODE_ENV=production webpack -p modules/index.js umd/resolvePathname.min.js",
-    "build-umd": "NODE_ENV=production webpack modules/index.js umd/resolvePathname.js",
+    "build-min": "NODE_ENV=production webpack -p modules/index.js umd/resolve-pathname.min.js",
+    "build-umd": "NODE_ENV=production webpack modules/index.js umd/resolve-pathname.js",
     "release": "node ./scripts/release.js",
     "prepublish": "npm run build",
     "test": "npm run lint && karma start"
