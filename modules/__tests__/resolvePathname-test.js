@@ -30,6 +30,10 @@ describe('resolvePathname', () => {
     expect(resolvePathname('c', '/a/')).toEqual('/a/c')
   })
 
+  it('works when to points to the parent directory', () => {
+    expect(resolvePathname('..', '/a/b')).toEqual('/')
+  })
+
   it('throws when to is an invalid pathname', () => {
     expect(() => resolvePathname('/../c')).toThrow()
   })
