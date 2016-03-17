@@ -12,6 +12,6 @@ exec('npm run build-min')
 
 console.log(
   '\ngzipped, the UMD build is ' + prettyBytes(
-    gzipSize.sync(readFileSync('umd/resolvePathname.min.js'))
+    gzipSize.sync(readFileSync('umd/resolve-pathname.min.js'))
   )
 )
