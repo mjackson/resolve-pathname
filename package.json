@@ -20,9 +20,6 @@
     "prepublish": "npm run build",
     "test": "npm run lint && karma start"
   },
-  "dependencies": {
-    "invariant": "^2.0.0"
-  },
   "devDependencies": {
     "babel-cli": "^6.5.1",
     "babel-core": "^6.5.2",

@@ -2,7 +2,9 @@
   "extends": "airbnb",
   "parser": "babel-eslint",
   "rules": {
-    "curly": [2, "multi-or-nest", "consistent"],
-    "semi": [2, "never"]
+    "curly": [1, "multi-or-nest", "consistent"],
+    "no-param-reassign": 0,
+    "semi": [2, "never"],
+    "spaced-comment": 0
   }
 }

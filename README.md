@@ -61,5 +61,5 @@ resolvePathname('../jobs', window.location.pathname) // /company/jobs
 
 ## Prior Work
 
+- [url.resolve](https://nodejs.org/api/url.html#url_url_resolve_from_to) - node's `url.resolve` implementation for full URLs
 - [resolve-url](https://www.npmjs.com/package/resolve-url) - A DOM-dependent implementation of the same algorithm
-- [path.resolve](https://nodejs.org/api/path.html#path_path_resolve_from_to) - node's posix-compliant path resolution algorithm for filesystems
