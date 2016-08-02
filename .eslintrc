@@ -1,10 +1,22 @@
 {
-  "extends": "airbnb",
   "parser": "babel-eslint",
+  "env": {
+    "node": true
+  },
+  "plugins": [
+    "import"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors"
+  ],
+  "settings": {
+    "import/ignore": [
+      "node_modules",
+      "modules/index.js"
+    ]
+  },
   "rules": {
-    "curly": [1, "multi-or-nest", "consistent"],
-    "no-param-reassign": 0,
-    "semi": [2, "never"],
-    "spaced-comment": 0
+    "semi": [ 2, "never" ]
   }
 }
