@@ -27,10 +27,10 @@ import resolvePathname from 'resolve-pathname'
 var resolvePathname = require('resolve-pathname')
 ```
 
-The UMD build is also available on [npmcdn](https://npmcdn.com):
+The UMD build is also available on [unpkg](https://unpkg.com):
 
 ```html
-<script src="https://npmcdn.com/resolve-pathname/umd/resolve-pathname.min.js"></script>
+<script src="https://unpkg.com/resolve-pathname/umd/resolve-pathname.min.js"></script>
 ```
 
 You can find the library on `window.resolvePathname`.
