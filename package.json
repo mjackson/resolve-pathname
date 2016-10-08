@@ -2,6 +2,7 @@
   "name": "resolve-pathname",
   "version": "2.0.1",
   "description": "Resolve URL pathnames using JavaScript",
+  "repository": "mjackson/resolve-pathname",
   "author": "Michael Jackson",
   "license": "MIT",
   "scripts": {
@@ -35,10 +36,6 @@
     "pretty-bytes": "^4.0.2",
     "readline-sync": "^1.4.1",
     "webpack": "^1.12.14"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mjackson/resolve-pathname.git"
   },
   "babel": {
     "presets": [
