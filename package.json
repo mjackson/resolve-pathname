@@ -4,15 +4,10 @@
   "description": "Resolve URL pathnames using JavaScript",
   "author": "Michael Jackson",
   "license": "MIT",
-  "main": "lib",
-  "files": [
-    "lib",
-    "umd"
-  ],
   "scripts": {
     "lint": "eslint modules",
     "build": "node ./scripts/build.js",
-    "build-cjs": "rimraf lib && babel ./modules -d lib --ignore '__tests__'",
+    "build-cjs": "babel ./modules -d . --ignore '__tests__'",
     "build-min": "NODE_ENV=production webpack -p modules/index.js umd/resolve-pathname.min.js",
     "build-umd": "NODE_ENV=production webpack modules/index.js umd/resolve-pathname.js",
     "release": "node ./scripts/release.js",
@@ -39,7 +34,6 @@
     "mocha": "^3.0.0",
     "pretty-bytes": "^4.0.2",
     "readline-sync": "^1.4.1",
-    "rimraf": "^2.5.2",
     "webpack": "^1.12.14"
   },
   "repository": {
