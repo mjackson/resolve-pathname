@@ -6,10 +6,12 @@
   "license": "MIT",
   "author": "Michael Jackson",
   "files": [
-    "es",
+    "cjs",
     "index.js",
     "umd"
   ],
+  "main": "cjs/index.js",
+  "module": "index.js",
   "scripts": {
     "build": "node ./tools/build.js",
     "prepublish": "node ./tools/build.js",
@@ -23,6 +25,7 @@
     "babel-core": "^6.5.2",
     "babel-eslint": "^7.0.0",
     "babel-loader": "^6.2.3",
+    "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-es2015": "^6.5.0",
     "babel-preset-stage-1": "^6.24.1",
     "eslint": "^3.2.2",

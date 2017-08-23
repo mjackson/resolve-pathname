@@ -1,12 +1,15 @@
-const buildPreset = require('babel-preset-es2015').buildPreset
+const plugins = []
 
-const BABEL_ENV = process.env.BABEL_ENV
+if (process.env.BABEL_ENV === 'cjs') {
+  plugins.push('add-module-exports')
+}
 
 module.exports = {
   presets: [
-    [ buildPreset, {
+    [ 'es2015', {
       loose: true,
-      modules: BABEL_ENV === 'es' ? false : 'commonjs'
+      modules: process.env.BABEL_ENV === 'es' ? false : 'commonjs'
     } ]
-  ]
+  ],
+  plugins: plugins
 }

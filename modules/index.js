@@ -1,16 +1,18 @@
-const isAbsolute = (pathname) =>
-  pathname.charAt(0) === '/'
+function isAbsolute(pathname) {
+  return pathname.charAt(0) === '/'
+}
 
 // About 1.5x faster than the two-arg version of Array#splice()
-const spliceOne = (list, index) => {
-  for (let i = index, k = i + 1, n = list.length; k < n; i += 1, k += 1)
+function spliceOne(list, index) {
+  for (let i = index, k = i + 1, n = list.length; k < n; i += 1, k += 1) {
     list[i] = list[k]
+  }
 
   list.pop()
 }
 
 // This implementation is based heavily on node's url.parse
-const resolvePathname = (to, from = '') => {
+function resolvePathname(to, from = '') {
   const toParts = to && to.split('/') || []
   let fromParts = from && from.split('/') || []
 
@@ -68,4 +70,4 @@ const resolvePathname = (to, from = '') => {
   return result
 }
 
-module.exports = resolvePathname
+export default resolvePathname
