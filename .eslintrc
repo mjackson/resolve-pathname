@@ -3,7 +3,5 @@
     "shared-node-browser": true
   },
   "extends": ["eslint:recommended"],
-  "parserOptions": {
-    "sourceType": "module"
-  }
+  "parser": "babel-eslint"
 }
