@@ -1,6 +1,3 @@
 {
-  "presets": [
-    "../tools/es2015-preset",
-    "stage-1"
-  ]
+  "presets": ["@babel/env"]
 }

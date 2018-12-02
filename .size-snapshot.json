@@ -1,0 +1,26 @@
+{
+  "esm/resolve-pathname.js": {
+    "bundled": 1764,
+    "minified": 722,
+    "gzipped": 404,
+    "treeshaked": {
+      "rollup": {
+        "code": 0,
+        "import_statements": 0
+      },
+      "webpack": {
+        "code": 951
+      }
+    }
+  },
+  "umd/resolve-pathname.js": {
+    "bundled": 2148,
+    "minified": 795,
+    "gzipped": 465
+  },
+  "umd/resolve-pathname.min.js": {
+    "bundled": 2148,
+    "minified": 795,
+    "gzipped": 465
+  }
+}

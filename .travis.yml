@@ -1,7 +1,27 @@
 language: node_js
-node_js:
-- stable
-branches:
-  only:
-  - master
-  - /^greenkeeper-/
+node_js: node
+cache: npm
+env:
+- TEST_ENV=cjs BUILD_ENV=cjs
+- TEST_ENV=umd BUILD_ENV=umd
+- TEST_ENV=source
+before_script:
+- ([[ -z "$BUILD_ENV" ]] || npm run build)
+script:
+- npm run lint
+- npm test
+jobs:
+  include:
+  - stage: Release
+    if: tag =~ ^v[0-9]
+    env: NPM_TAG=$([[ "$TRAVIS_TAG" == *-* ]] && echo "next" || echo "latest")
+    script: echo "Releasing $TRAVIS_TAG to npm with tag \"$NPM_TAG\" ..."
+    deploy:
+      provider: npm
+      skip_cleanup: true
+      tag: "$NPM_TAG"
+      email: npm@mjackson.me
+      api_key:
+        secure: FFo4kATFfuGW7IhODQr6PaqxrwCzAyQd3o3EU3irJkfA/PAMVg8Ccd8LeCFOZQZ0Lf1xMwGnQaaw9a3MQBukIXTyX7gzuXfq0PFH3w4gxQbLiiG6DKX+vIvC9dm0yuELfIzfq2znqEtK0mmGKT6y1ZYUqYe+BeQkaksD3cBfVaK5UVCg6ktratfnPtlvPoErRmn6yR8BydQPw75p10ofAkRf/EPfJ1q6fEpSODDs88/I5WO1s3XldIycSw+x2xc49p+7CFx1whU4vZ8MHp9ccFIv16WPCaSQ77Gnkk2FSUXH2+swGH8+5b8PD2WunDvrTM6dq1FOrqhliu9UUgNUrWW2Zi2CymbYtG/S7AxJB4S7+zTCkdThjIkgKVIknMglG/d7Fa0Q+tAvU7/KkyMAYCCXl+ntbVuBl36SpxgqnWo8N5BJfWR0J2SwKqaKXk1Bj9IKrB+zwVnZW982V3BmaUvMqfkA/lHaw0urRy/fdtepWE4ax8nLAMkWjP9rOOPn6GUjcaiBz8DrdZ1Bz1ytvlkLS6xrbyxW3iLfkAvWB26RB/nD2y/L896ciNLx6rG/ZPM7Iy8aQtxKs6RrNcvHCdjD/77nDqh+kBzsCYApF2p/Mmyd+GPqM9N3NlI+jznYvNrpCOxN79zz12lj+w3NqBA0/TFed1TrLHPHzAMx38Q=
+      on:
+        tags: true
