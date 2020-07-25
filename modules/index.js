@@ -42,7 +42,7 @@ function resolvePathname(to, from) {
   }
 
   var up = 0;
-  for (var i = fromParts.length; i >= 0; i--) {
+  for (var i = fromParts.length-1; i >= 0; i--) {
     var part = fromParts[i];
 
     if (part === '.') {
